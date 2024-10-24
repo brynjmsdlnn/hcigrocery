@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Inria+Sans&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>HCI Grocery | Verify</title>
+</head>
+<body>
+    <section>
+        <p class="icon">
+            <i class="fa-solid fa-envelope-circle-check"></i>
+        </p>
+        <p class="message">Please check your email</p>
+        <p class="descMsg">We've sent a code to email@domain.com</p>
+        <form action="/verify-code" method="post">
+            <div class="row">
+                <div class="col-3">
+                    <input class="otp-letter-input" type="text" name="otp1" maxlength="1" required>
+                </div>
+                <div class="col-3">
+                    <input class="otp-letter-input" type="text" name="otp2" maxlength="1" required>
+                </div>
+                <div class="col-3">
+                    <input class="otp-letter-input" type="text" name="otp3" maxlength="1" required>
+                </div>
+                <div class="col-3">
+                    <input class="otp-letter-input" type="text" name="otp4" maxlength="1" required>
+                </div>
+            </div>
+        </form>
+        <p class="resendMsg">Did not receive the code? <a href="#">Click to resend.</a></p>
+        <div class="position-relative">
+            <button type="submit" class="btnVerify position-absolute top-50 start-50 translate-middle mt-4 w-100">Verify</button>
+        </div>  
+    </section>
+</body>
+</html>
