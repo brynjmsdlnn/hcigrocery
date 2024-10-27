@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,7 @@
 
         .search-container {
             background-image: url("../assets/background.svg");
-            padding: 20px 0;
+            padding: 20px;
         }
         .category-card {
             border: none;
@@ -38,6 +40,16 @@
             color: white;
             border-radius: 15px;
         }
+        
+        .nav-icon {
+            color: #666;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .nav-icon.active {
+            color: #2e7d32;
+        }
+
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -47,35 +59,36 @@
             padding: 10px 0;
             z-index: 1000;
         }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
         .nav-icon {
             color: #666;
             text-decoration: none;
             font-size: 1.2rem;
         }
+
         .nav-icon.active {
-            color: #2e7d32;
+            color: #2e7d32; 
         }
     </style>
 </head>
 <body>
     <!-- Search Bar -->
     <div class="search-container">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-10">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
-                        <button class="btn btn-outline-secondary" type="button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-2 text-end">
-                    <i class="fas fa-bell"></i>
-                </div>
-            </div>
-        </div>
+    <div class="input-group">
+        <input type="text" class="form-control" id="searchInput" placeholder="Search for products">
+        <button class="btn btn-outline-secondary" type="button">
+            <i class="fas fa-search"></i>
+        </button>
     </div>
+    <div class="search-results-container">
+        <div id="searchResults"></div>
+    </div>
+</div>
 
     <!-- Main Content -->
     <div class="container mb-5 pb-5">
@@ -127,39 +140,10 @@
         </div>
     </div>
 
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col">
-                    <a href="#" class="nav-icon active">
-                        <i class="fas fa-store"></i>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" class="nav-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" class="nav-icon">
-                        <i class="fas fa-plus"></i>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" class="nav-icon">
-                        <i class="fas fa-bell"></i>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" class="nav-icon">
-                        <i class="fas fa-user"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include './components/bottom-nav.php'; ?>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>

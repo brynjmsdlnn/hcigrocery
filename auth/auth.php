@@ -7,6 +7,39 @@ require 'config.php';
 require '../includes/session.php';
 require '../vendor/autoload.php';
 
+class Auth {
+    private $session;
+    private $db;
+
+    public function __construct(Database $db) {
+        $this->session = new Session();
+        $this->db = $db;
+    }
+
+    public function requireAuth() {
+        if (!$this->session->isLoggedIn()) {
+            header('Location: /hci/login.php');
+            exit();
+        }
+    }
+
+    public function requireGuest() {
+        if ($this->session->isLoggedIn()) {
+            header('Location: /hci/index.php');
+            exit();
+        }
+    }
+
+    public function requireRole($role) {
+        $this->requireAuth();
+        if ($this->session->getRole() !== $role) {
+            header('Location: /hci/unauthorized.php');
+            exit();
+        }
+    }
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
 
@@ -59,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
-            header('Location: ../index.php');
+            header('Location: ../views/index.php');
         } else {
             echo "Invalid email or password.";
         }
