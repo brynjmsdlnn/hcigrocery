@@ -1,0 +1,275 @@
+body {
+    background-image: url('assets/background.svg');
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: normal !important;
+}
+header {
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inria Sans', sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 720px !important; 
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 720px !important; 
+    }
+}
+.logoLogIn {
+    max-width: 175px;
+}
+.logoSignUp {
+    max-width: 135px;
+}
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1.5rem;
+}
+.descMsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1rem;
+}
+a {
+    text-decoration: none !important;
+}
+.loginButton {
+    margin-top: 70px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    background-color: #606060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inria Sans', sans-serif;
+}   
+.loginButton h3{
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+.createAccountButton {
+    border-radius: 10px;
+    padding: 0px 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createAccountButton h3{
+    color: #606060;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+.greyButton {
+    appearance: none; 
+    -webkit-appearance: none;
+    border-radius: 10px;
+    padding: 1rem 5rem;
+    font-size: 1rem;
+    background-color: #606060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}   
+.greyButton h3{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.btnRegister, .btnVerify, .btnNext{
+    border: none;
+    outline: none;
+    background-color: #606060;
+    padding: 1rem 5rem;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.textField {
+    border: 1px #606060 solid;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    gap: 1rem;
+    flex: 1;
+}
+.textField p{
+    color: #606060;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+.phoneIcon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #606060;
+}
+.signupTxtField, .loginTxtField, .iniTxtField {
+    position: relative;
+    border: 1px #606060 solid;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    gap: 1rem;
+    flex: 1;
+}
+.iniTxtField input {
+    padding-left: 2rem;
+}
+.signupTxtField input, .loginTxtField input, .iniTxtField input{
+    border: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+.or {
+    padding: 1.5rem 0px;
+    display: flex;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    gap: 1rem;
+}
+.or::before, .or::after {
+    content: "";
+    flex: 1;
+    background-color: #333333;
+    height: 1px; 
+    width: 100%; 
+    margin: 10px 0; 
+}
+.lgButton {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inria Sans', sans-serif;
+    gap: 1rem;
+}   
+.lgButton p{
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+.termsMsg {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #333333;
+}
+.termsMsg a{
+    color: black;
+    font-weight: bold;
+}
+.name{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;
+}
+.checkBox{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 2rem;
+}
+.checkBox input[type="checkbox"] {
+    appearance: none; 
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #e0e0e0; 
+    cursor: pointer;
+    position: relative;
+}
+.checkBox input[type="checkbox"]:checked {
+    background-color: #34a853;
+}
+.checkBox input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); 
+}
+.acceptMsg {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #333333;
+}
+.acceptMsg a, .resendMsg a{
+    color: #34a853;
+    font-weight: bold;
+    text-decoration: none;
+}
+.otp-letter-input{
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #34a853;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    max-width: 100px;
+}
+.btn{
+    height: 50px;
+}
+.icon {
+    text-align: center;
+    color: #34a853;
+    font-size: 5.5rem;
+}
+.resendMsg {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: #333333;
+}

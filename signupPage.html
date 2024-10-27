@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Inria+Sans&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>HCI Grocery | Sign Up</title>
+</head>
+<body>
+    <section>
+        <header>
+            <img src="assets/logo.svg" class="logoSignUp" alt="logoSignUp">
+        </header>
+        <form action="/iniSignUp" method="post" class="pb-4 mb-4">
+            <div class="iniTxtField">
+                <i class="fas fa-phone phoneIcon"></i>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number [eg 09123456789]" pattern="[0-9]{11}" required>
+            </div>
+            <a href="signupFormPage.html">
+                <div class="position-relative pt-2">
+                    <button type="submit" class="btnNext position-absolute top-50 start-50 translate-middle mt-4 w-100">Next</button>
+                </div>   
+            </a>
+        </form>
+        <div class="or">
+            <p>or continue with</p>
+        </div>
+        <a href="">
+            <div class="lgButton">
+                <img src="assets/google.svg" alt="googleLogo">
+                <p>Google</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="lgButton">
+                <img src="assets/facebook.svg" alt="facebookLogo">
+                <p>Facebook</p>
+            </div>
+        </a>
+        <div class="termsMsg">
+            <p>By signing up, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></p>
+        </div>
+    </section>
+</body>
+</html>
